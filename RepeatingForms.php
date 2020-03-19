@@ -319,7 +319,7 @@ class RepeatingForms
 
         // Find the last instance and add 1 to it. If there are no current instances, return 1.
         $last_index = $this->getLastInstanceId($record_id, $event_id);
-        if (is_null($last_index)) {
+        if (empty($last_index)) {
             return 1;
         } else {
             return ++$last_index;
